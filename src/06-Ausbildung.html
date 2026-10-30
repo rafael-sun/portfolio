@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Meine Ausbildung bei CodersBay Vienna: der Weg von der ersten HTML-Datei bis zum Layout mit Flexbox.">
+    <title>Meine Ausbildung bei CodersBay</title>
+
+    <!-- Hier deine eigene CSS-Datei einbinden, z. B.: -->
+    <!-- <link rel="stylesheet" href="style.css"> -->
+
+    <style>
+        /* Alle Regeln gelten nur innerhalb von .ausbildung,
+           damit sie dein bestehendes Design nicht stören. */
+
+        .ausbildung {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 2rem 1rem;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 1rem;
+            line-height: 1.6;
+            color: #222222;
+        }
+
+        .ausbildung h1 {
+            font-size: 2rem;
+            color: #1a1a1a;
+            margin-bottom: 0.5rem;
+        }
+
+        .ausbildung h2 {
+            font-size: 1.5rem;
+            color: #1a1a1a;
+            border-bottom: 3px solid #1a1a1a;
+            padding-bottom: 0.3rem;
+        }
+
+        .ausbildung h3 {
+            font-size: 1.2rem;
+            margin-top: 0;
+        }
+
+        .ausbildung .einleitung {
+            font-size: 1.15rem;
+        }
+
+        /* Jede "Folie" der Präsentation */
+        .ausbildung .folie {
+            background-color: #ffffff;
+            border: 1px solid #cccccc;
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        /* Schritte als Flexbox: bricht auf kleinen Bildschirmen automatisch um */
+        .ausbildung .schritte {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .ausbildung .schritt {
+            flex: 1 1 280px;
+            background-color: #f4f4f4;
+            border-left: 5px solid #1a1a1a;
+            padding: 1rem;
+        }
+
+        .ausbildung .nummer {
+            display: inline-block;
+            background-color: #1a1a1a;
+            color: #ffffff;
+            font-weight: bold;
+            padding: 0.1rem 0.6rem;
+            border-radius: 4px;
+            margin-bottom: 0.5rem;
+        }
+
+        .ausbildung mark {
+            background-color: #ffe14d;
+            color: #1a1a1a;
+        }
+
+        .ausbildung a {
+            color: #0050a0;
+        }
+
+        /* Sichtbarer Fokus für Tastaturbedienung (Barrierefreiheit) */
+        .ausbildung a:focus {
+            outline: 3px solid #ffe14d;
+            outline-offset: 2px;
+        }
+
+        /* Tabelle: bei schmalen Bildschirmen horizontal scrollbar statt abgeschnitten */
+        .ausbildung .tabelle-rahmen {
+            overflow-x: auto;
+        }
+
+        .ausbildung table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .ausbildung caption {
+            text-align: left;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+
+        .ausbildung th,
+        .ausbildung td {
+            border: 1px solid #999999;
+            padding: 0.5rem 0.75rem;
+            text-align: left;
+        }
+
+        .ausbildung th {
+            background-color: #1a1a1a;
+            color: #ffffff;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Hier kommt dein eigener Header mit Navigation hin -->
+
+    <main class="ausbildung">
+
+        <h1>Meine Ausbildung bei CodersBay</h1>
+        <p class="einleitung">
+            Vom Beruf als CRM Manager zur eigenen Website: Hier zeige ich, was ich in den ersten
+            Wochen meiner Ausbildung bei <strong>CodersBay Vienna</strong> gelernt habe.
+            Ich gehe Schritt für Schritt vor, so wie die Aufgaben im Kurs aufeinander aufbauen.
+        </p>
+
+        <!-- Folie 1 -->
+        <section class="folie" aria-labelledby="titel-start">
+            <h2 id="titel-start">Ausgangspunkt</h2>
+            <p>
+                In meinem Beruf arbeite ich viel mit <em>CRM-Systemen</em>,
+                <em>Prozessautomatisierung</em> und <em>SQL</em>. Ich wollte verstehen,
+                wie das Web hinter diesen Tools funktioniert. Deshalb habe ich die Ausbildung
+                zum Webdeveloper bei CodersBay begonnen.
+            </p>
+            <p>Meine Ziele für die Ausbildung:</p>
+            <ul>
+                <li>Websites selbst mit HTML und CSS bauen</li>
+                <li>Sauberen und barrierefreien Code schreiben</li>
+                <li>Mein technisches Wissen mit meiner CRM-Erfahrung verbinden</li>
+            </ul>
+        </section>
+
+        <!-- Folie 2 -->
+        <section class="folie" aria-labelledby="titel-weg">
+            <h2 id="titel-weg">Mein Weg in acht Schritten</h2>
+
+            <ol class="schritte">
+                <li class="schritt">
+                    <span class="nummer">1</span>
+                    <h3>Hallo Welt</h3>
+                    <p>
+                        Meine erste Datei: <em>hallowelt.html</em> mit der HTML-Grundstruktur,
+                        dem Titel „Hallo Welt“ und meinem Namen im Body.
+                    </p>
+                </li>
+
+                <li class="schritt">
+                    <span class="nummer">2</span>
+                    <h3>Erste kleine Website</h3>
+                    <p>
+                        Überschriften, Absätze, Textformatierungen und Links. Danach kamen
+                        Bilder, Tabellen und Listen dazu.
+                    </p>
+                </li>
+
+                <li class="schritt">
+                    <span class="nummer">3</span>
+                    <h3>Seite nachbauen</h3>
+                    <p>
+                        Eine Seite zum Thema <em>„Warum sind Katzenvideos so beliebt?“</em>
+                        nur anhand eines Screenshots nachgebaut. Dabei habe ich gelernt,
+                        Strukturen zu erkennen.
+                    </p>
+                </li>
+
+                <li class="schritt">
+                    <span class="nummer">4</span>
+                    <h3>Formulare</h3>
+                    <p>
+                        Textfelder, Textareas, Checkboxen, Radio Buttons, Select-Box und
+                        Submit-Button, mit Attributen wie <strong>placeholder</strong> und
+                        <strong>required</strong>.
+                    </p>
+                </li>
+
+                <li class="schritt">
+                    <span class="nummer">5</span>
+                    <h3>Gestaltung mit CSS</h3>
+                    <p>
+                        Selektoren, Farben, Rahmen, Text und Schriften. Zuerst als
+                        Inline CSS und Internal CSS.
+                    </p>
+                </li>
+
+                <li class="schritt">
+                    <span class="nummer">6</span>
+                    <h3>Mehrere Seiten</h3>
+                    <p>
+                        Weitere Seiten in einem Unterverzeichnis, verbunden über relative Links.
+                        Das CSS liegt jetzt in einer eigenen Datei.
+                    </p>
+                </li>
+
+                <li class="schritt">
+                    <span class="nummer">7</span>
+                    <h3>Semantisches Layout</h3>
+                    <p>
+                        Aufbau mit <strong>header</strong>, <strong>main</strong> und
+                        <strong>footer</strong>, ohne störende Scrollbalken.
+                    </p>
+                </li>
+
+                <li class="schritt">
+                    <span class="nummer">8</span>
+                    <h3>Navigation mit Flexbox</h3>
+                    <p>
+                        Ein Header mit Navigation. Der wichtigste Trick:
+                        Flexboxen lassen sich <mark>verschachteln</mark>.
+                    </p>
+                </li>
+            </ol>
+        </section>
+
+        <!-- Folie 3 -->
+        <section class="folie" aria-labelledby="titel-uebersicht">
+            <h2 id="titel-uebersicht">Übersicht</h2>
+            <div class="tabelle-rahmen">
+                <table>
+                    <caption>Gelernte Themen und Elemente pro Aufgabe</caption>
+                    <tr>
+                        <th scope="col">Aufgabe</th>
+                        <th scope="col">Thema</th>
+                        <th scope="col">Wichtigste Elemente</th>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>Hallo Welt</td>
+                        <td>html, head, title, body</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Erste Website</td>
+                        <td>h1–h6, p, strong, em, a, img, table, ul, ol</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Seite nachbauen</td>
+                        <td>mark, hr, table, ol, img</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Formulare</td>
+                        <td>form, input, label, select, textarea, button</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>CSS</td>
+                        <td>Selektoren, Farben, Rahmen, Text, Schriften</td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>Mehrere Seiten</td>
+                        <td>Relative Links, External CSS</td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td>Layout</td>
+                        <td>header, main, footer</td>
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td>Navigation</td>
+                        <td>nav, Flexbox</td>
+                    </tr>
+                </table>
+            </div>
+        </section>
+
+        <!-- Folie 4 -->
+        <section class="folie" aria-labelledby="titel-fazit">
+            <h2 id="titel-fazit">Fazit</h2>
+            <p>Gute Websites entstehen <strong>Schicht für Schicht</strong>:</p>
+            <ol>
+                <li>Zuerst die Struktur mit HTML</li>
+                <li>Dann das Design mit CSS</li>
+                <li>Zum Schluss das Layout mit Flexbox</li>
+            </ol>
+            <p>
+                Diese Seite ist der Anfang meines Portfolios und wächst mit jedem neuen
+                Kursabschnitt weiter.
+            </p>
+            <p>
+                Den Code meiner Übungen findest du auf
+                <a href="https://github.com/DEIN-BENUTZERNAME" target="_blank" rel="noopener">
+                    GitHub (öffnet in neuem Tab)</a>.
+            </p>
+        </section>
+
+    </main>
+
+    <!-- Hier kommt dein eigener Footer hin, falls vorhanden -->
+
+</body>
+</html>
